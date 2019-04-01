@@ -1,0 +1,172 @@
+/*Grid lay out*/
+.header { grid-area: header; }
+.ad1 { grid-area: ad1; }
+.ad2 { grid-area: ad2; }
+.ad3 { grid-area: ad3; }
+
+body{
+  display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-areas: 
+         "header header header"
+         "ad1 ad2 ad3"; 
+ }
+
+  /*Tablet*/
+ @media (min-width: 481px) and (max-width: 768px) {  
+     body{
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr 1fr;
+       grid-template-areas: 
+             "header header header header"
+             "ad1 ad1 ad3 ad3"
+             "ad2 ad2 ad2 ad2"; 
+     }
+ }
+/*Einde tablet*/
+
+/*Mobiel L*/
+@media (min-width: 0px) and (max-width: 480px) {
+     body{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: 
+        "header header header"
+         "ad1 ad1 ad1"
+         "ad2 ad2 ad2"
+         "ad3 ad3 ad3"; 
+     }
+ }
+ /*Einde mobiel L*/
+
+ /*einde grid lay-out*/
+
+/*Algemeen*/
+html {
+    box-sizing: border-box;
+}
+
+*, 
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+header {
+    background-color: black;
+    padding: 10px 1px 10px 40px;
+}
+
+body {
+    background: url(sky.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: Avenir, Arial, sans-serif;
+    margin: 0;
+}
+
+/*het logo: Spacex*/
+.logo {
+    width: 20%;
+}
+
+/*De 3 boxen: Welcome back to earth!, Random activity generator, The weather*/
+aside {
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+/*De button waar je op moet klikken om verschillende activiteiten te zien*/
+#getActivity {
+	background-color: #103754;
+	color: white;
+	width: 100%;
+	min-height: 64px;
+	font-size: 18px;
+	position: relative;
+	top: -5px;
+	z-index: 1;
+	border: none;
+	border-radius: 3px;
+	padding: 8px;
+}
+
+/*De zoekbutton van het vak The Weather*/
+#getWeather {
+    background-color: #103754;
+	color: white;
+	width: 40%;
+	min-height: 15px;
+	font-size: 13px;
+	position: relative;
+	top: -5px;
+	z-index: 1;
+	border: none;
+	border-radius: 3px;
+	padding: 8px;
+}
+
+/*Hierinn komt het weerbericht van de specifieke stad te staann*/
+#weather {
+    background: rgba(16, 55, 84, 0.7);
+	width: 200px;
+	padding: 6px;
+	text-align: center;
+}
+
+/*De tekstvak waar je steden kunt op zoeken*/
+#city {
+    width: 40%;
+	min-height: 15px;
+	font-size: 13px;
+	position: relative;
+	top: -5px;
+}
+
+/*Laptop*/
+@media (min-width: 769px) and (max-width: 1024px) {  
+    /**/
+    .logo {
+        width: 30%;
+    }
+
+}
+/*Einde laptop*/
+
+/*Tablet*/
+@media (min-width: 481px) and (max-width: 768px) {  
+    /*het logo: Spacex*/
+    .logo {
+        width: 30%;
+    }
+    
+    header {
+        padding-left: 30px;
+    }
+
+}
+/*Einde tablet*/
+
+/*Mobiel L*/
+@media (min-width: 0px) and (max-width: 480px) {
+    /*het logo: Spacex*/
+    .logo {
+        width: 50%;
+    }
+
+    header {
+        padding: 10px 0px 5px 15px;
+    }
+    
+    /*De button waar je op moet klikken om verschillende activiteiten te zien*/
+    #getActivity {
+        font-size: 14px;
+    }
+    
+    /*De zoekbutton van het vak The Weather*/
+    #getWeather {
+	   font-size: 12px;
+    }
+}
+/*Einde mobiel L*/

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SpaceX</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header class="grid-item header">
+            <img class="logo"  src="logo.png" alt="Logo van SpaceX"/>
+        </header>
+	    <aside class="grid-item ad1">
+	    	<h1>Welcome back to earth!</h1>
+            <p>There are lots of things that you can do on earth!
+            When you are on earth and you don't have a clue about what you can do, use our <b>random activity generator</b>!<br><br>
+            Also you can look up the weather for every city. This can help you choose what kind activity you like to do, an indoor activity or an out door activity. Have fun!</p>
+	    </aside>
+	    <aside class="grid-item ad2">
+            <div class="activiteit">
+                <div class="act-text">
+                    <h2>Random activity generator</h2>
+                    <p>Click for an activity:</p>
+                </div>
+                 <input type="button" id="getActivity" value="Click for a random activity!" onclick="getAPIactivity()"/>
+            </div>
+	    </aside>
+        <aside class="grid-item ad3">
+	    	<h2>The weather</h2>
+            <article id="weather"></article>
+                <form><br>
+                    <legend>Get current weather</legend><br>
+                    <label for="city">City:</label>
+                    <input type="text" name="city" id="city" /> <br><br>
+                    <input type="button" id="getWeather" value="Search" />
+                </form>
+	       </aside>
+        <br>
+        <br>
+        <br>
+        <br>
+	    <script src="apiactiviteit.js"></script>
+        <script src="apiweer.js"></script>
+    </body>
+</html>
